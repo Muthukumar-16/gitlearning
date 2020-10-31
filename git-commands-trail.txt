@@ -1,0 +1,571 @@
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ git help config
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ git config --global user.name "Muthukumar-16"
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ git config --global user.email "muthuabja2020@gmail.com"
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ git config --global color.ui true
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ mkdir store
+
+user@DESKTOP-DH2HDQL MINGW64 ~
+$ cd store
+
+user@DESKTOP-DH2HDQL MINGW64 ~/store
+$ git init
+Initialized empty Git repository in C:/Users/user/store/.git/
+
+user@DESKTOP-DH2HDQL MINGW64 ~/store (master)
+$ cd D:\byjus
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus
+$ mkdir store
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus
+$ cd store
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store
+$ git init
+Initialized empty Git repository in D:/byjus/store/.git/
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git config --global user.name "Muthukumar-16"
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git config --global user.email "muthuabja2020@gmail.com"
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git config --global color.ui true
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git remote -v
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git remote add origin https://github.com/Muthukumar-16/learning-git
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git remote -v
+origin  https://github.com/Muthukumar-16/learning-git (fetch)
+origin  https://github.com/Muthukumar-16/learning-git (push)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ heroku create
+bash: heroku: command not found
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git clone origin master
+fatal: repository 'origin' does not exist
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git clone master
+fatal: repository 'master' does not exist
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git clone https://github.com/Muthukumar-16/learning-git clone-test-git
+Cloning into 'clone-test-git'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), done.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git remote -v
+origin  https://github.com/Muthukumar-16/learning-git (fetch)
+origin  https://github.com/Muthukumar-16/learning-git (push)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git branch
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git branch cat
+fatal: Not a valid object name: 'master'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git branch master
+fatal: Not a valid object name: 'master'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git branch slave
+fatal: Not a valid object name: 'master'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ cd ..
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus
+$ git branch testing
+fatal: not a git repository (or any of the parent directories): .git
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus
+$ cd store
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git config --global user.name "Muthukumar-16"
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git config --global user.email "muthuabja2020@gmail.com"
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git branch testing
+fatal: Not a valid object name: 'master'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git add git-commands
+fatal: pathspec 'git-commands' did not match any files
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git add git-commands.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   git-commands.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        clone-test-git/
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git commit -m "First commit"
+[master (root-commit) 7301687] First commit
+ 1 file changed, 22 insertions(+)
+ create mode 100644 git-commands.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git branch branch-testing
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 467 bytes | 467.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Muthukumar-16/learning-git/pull/new/master
+remote:
+To https://github.com/Muthukumar-16/learning-git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ cd D:\byjus\Git_Training\web-workspace
+bash: cd: D:byjusGit_Trainingweb-workspace: No such file or directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/store (master)
+$ cd ..
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus
+$ cd ..
+
+user@DESKTOP-DH2HDQL MINGW64 /d
+$ cd D:\byjus\Git_Training\web-workspace
+bash: cd: D:byjusGit_Trainingweb-workspace: No such file or directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d
+$ d:
+bash: d:: command not found
+
+user@DESKTOP-DH2HDQL MINGW64 /d
+$ d:\
+> cd byjus
+bash: d:cd: command not found
+
+user@DESKTOP-DH2HDQL MINGW64 /d
+$ cd byjus
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus
+$ cd Git_Training
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training
+$ cd web-workspace
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace
+$ ^C
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace
+$ mkdir git-real
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace
+$ cd git-real
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real
+$ git init
+Initialized empty Git repository in D:/byjus/Git_Training/web-workspace/git-real/.git/
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ ls ltra
+ls: cannot access 'ltra': No such file or directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ ls -ltra
+total 4
+drwxr-xr-x 1 user 197121 0 Oct 30 16:28 ../
+drwxr-xr-x 1 user 197121 0 Oct 30 16:28 ./
+drwxr-xr-x 1 user 197121 0 Oct 30 16:28 .git/
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ ls .git
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git remote -v
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ vi README.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git add README.txt
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.txt
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git rm --README.txt
+error: unknown option `README.txt'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git rm --cached README.txt
+rm 'README.txt'
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git add *.txt
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.txt
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git commit -m "Added README.txt file"
+[master (root-commit) fd08560] Added README.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git remote add origin https://github.com/Muthukumar-16/learning-git
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git remote -v
+origin  https://github.com/Muthukumar-16/learning-git (fetch)
+origin  https://github.com/Muthukumar-16/learning-git (push)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git branch -M main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git push -u origin main
+To https://github.com/Muthukumar-16/learning-git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Muthukumar-16/learning-git'
+hint: Updates were rejected because the remote contains work that you do
+git hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.42 KiB | 96.00 KiB/s, done.
+From https://github.com/Muthukumar-16/learning-git
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+fatal: refusing to merge unrelated histories
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git add README.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ vi read_me.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git add read_me.txt
+warning: LF will be replaced by CRLF in read_me.txt.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   read_me.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    README.txt
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git restore README.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   read_me.txt
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git commit -m "Added real_me.txt"
+[main 37d304d] Added real_me.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 read_me.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git push -u origin main
+To https://github.com/Muthukumar-16/learning-git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Muthukumar-16/learning-git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git branch -M master
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Muthukumar-16/learning-git'
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git checkout -d main
+fatal: '--detach' cannot be used with '-b/-B/--orphan'
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ cd ..
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace
+$ cd git-real
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real
+$ git init
+Initialized empty Git repository in D:/byjus/Git_Training/web-workspace/git-real/.git/
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git add README.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git commit -m "Added README file"
+[master (root-commit) 31d7470] Added README file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (master)
+$ git branch -M main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git remote add origin https://github.com/Muthukumar-16/gitlearning
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 252 bytes | 252.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Muthukumar-16/gitlearning
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$ ^C
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real (main)
+$

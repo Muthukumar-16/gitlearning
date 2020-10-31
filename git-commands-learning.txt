@@ -1,0 +1,356 @@
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2
+$ git init
+Initialized empty Git repository in D:/byjus/Git_Training/web-workspace/git-real2/.git/
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git config --global user.name Muthukumar-16
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git config --global user.email muthuabja2020@gmail.com
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git config --global color.ui true
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git remote add origin git@github.com:Muthukumar-16/gitlearning.git
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git remote -v
+origin  git@github.com:Muthukumar-16/gitlearning.git (fetch)
+origin  git@github.com:Muthukumar-16/gitlearning.git (push)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git pull origin main
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 28 (delta 9), reused 22 (delta 4), pack-reused 0
+Unpacking objects: 100% (28/28), 3.08 KiB | 21.00 KiB/s, done.
+From github.com:Muthukumar-16/gitlearning
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (master)
+$ git branch -M main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ mkdir clone
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ cd clone
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2/clone (main)
+$ git clone git@github.com:Muthukumar-16/gitlearning.git
+Cloning into 'gitlearning'...
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 28 (delta 9), reused 22 (delta 4), pack-reused 0
+Receiving objects: 100% (28/28), done.
+Resolving deltas: 100% (9/9), done.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2/clone (main)
+$ cd ..
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ vi testupload
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ mv -help
+mv: unknown option -- h
+Try 'mv --help' for more information.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ mv -help
+mv: unknown option -- h
+Try 'mv --help' for more information.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ mv --help
+Usage: mv [OPTION]... [-T] SOURCE DEST
+  or:  mv [OPTION]... SOURCE... DIRECTORY
+  or:  mv [OPTION]... -t DIRECTORY SOURCE...
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+  -f, --force                  do not prompt before overwriting
+  -i, --interactive            prompt before overwrite
+  -n, --no-clobber             do not overwrite an existing file
+If you specify more than one of -i, -f, -n, only the final one takes effect.
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  move all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 move only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -Z, --context                set SELinux security context of destination
+                                 file to default type
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/mv>
+or available locally via: info '(coreutils) mv invocation'
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ mv -v testupload testupload.txt
+renamed 'testupload' -> 'testupload.txt'
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git add *
+warning: adding embedded git repository: clone/gitlearning
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> clone/gitlearning
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached clone/gitlearning
+hint:
+hint: See "git help submodule" for more information.
+warning: LF will be replaced by CRLF in testupload.txt.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   clone/gitlearning
+        new file:   testupload.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    clone/gitlearning
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git add *
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   clone/gitlearning
+        new file:   testupload.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    clone/gitlearning
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git commit -m "Redoing the same excercise - uploading a file to GIT"
+[main be18c66] Redoing the same excercise - uploading a file to GIT
+ 2 files changed, 2 insertions(+)
+ create mode 160000 clone/gitlearning
+ create mode 100644 testupload.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 452 bytes | 226.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Muthukumar-16/gitlearning.git
+   ae7547f..be18c66  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ vi skipstage.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git commit -a skipstage.txt -m "This excercise it to test skip staging and commit it directly"
+fatal: paths 'skipstage.txt ...' with -a does not make sense
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git commit -a -m "This excercise it to test skip staging and commit it directly"
+[main eb05731] This excercise it to test skip staging and commit it directly
+ 1 file changed, 1 deletion(-)
+ delete mode 160000 clone/gitlearning
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 264 bytes | 264.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Muthukumar-16/gitlearning.git
+   be18c66..eb05731  main -> main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git reset --soft HEAD^
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    clone/gitlearning
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        skipstage.txt
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git
+Display all 66 possibilities? (y or n)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git restore --staged skipstage.txt
+error: pathspec 'skipstage.txt' did not match any file(s) known to git
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git add *
+warning: LF will be replaced by CRLF in skipstage.txt.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git commit -m "reset the commit and commit it again"
+[main eea9822] reset the commit and commit it again
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 160000 clone/gitlearning
+ create mode 100644 skipstage.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git push
+To github.com:Muthukumar-16/gitlearning.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:Muthukumar-16/gitlearning.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git reset --hard HEAD^
+HEAD is now at be18c66 Redoing the same excercise - uploading a file to GIT
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git branch
+* main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git branch cat
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git branch
+  cat
+* main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git checkout cat
+Switched to branch 'cat'
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (cat)
+$ vi non-fast-forward.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (cat)
+$ git add *.txt
+warning: LF will be replaced by CRLF in non-fast-forward.txt.
+The file will have its original line endings in your working directory
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (cat)
+$ git commit -m "testing again the merge of branches"
+[cat e26658c] testing again the merge of branches
+ 1 file changed, 1 insertion(+)
+ create mode 100644 non-fast-forward.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (cat)
+$ git push
+fatal: The current branch cat has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin cat
+
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (cat)
+$ git push -u origin cat
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Muthukumar-16/gitlearning.git
+   3f3d0f9..e26658c  cat -> cat
+Branch 'cat' set up to track remote branch 'cat' from 'origin'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (cat)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git merge cat
+Updating be18c66..e26658c
+Fast-forward
+ non-fast-forward.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 non-fast-forward.txt
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git branch
+  cat
+* main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git checkout -d cat
+HEAD is now at e26658c testing again the merge of branches
+Your branch is up to date with 'origin/cat'.
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 ((e26658c...))
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ git branch
+  cat
+* main
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/user/.ssh/id_rsa):
+/c/Users/user/.ssh/id_rsa already exists.
+Overwrite (y/n)? n
+
+user@DESKTOP-DH2HDQL MINGW64 /d/byjus/Git_Training/web-workspace/git-real2 (main)
+$
